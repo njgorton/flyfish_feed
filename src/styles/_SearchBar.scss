@@ -1,0 +1,29 @@
+.searchBar {
+
+    &__form {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: none;
+    }
+
+    &__input {
+        margin: 0 auto;
+        width: 100%;
+        font-size: 2rem;
+        font-family: $font-content;
+        padding: 10px;
+        background: rgba(255, 255, 255, .7);
+        border-radius: 10px;
+        border: none;
+        
+        &::placeholder {
+            color: $color-text;
+        }
+    }
+}

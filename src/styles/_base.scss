@@ -1,0 +1,70 @@
+// COLORS
+$color-white-light: #FFFFFF;
+$color-text: rgb(139, 0, 0);
+$color-dark: #353535;
+// $color-orange: #f29130;
+// $color-tan: #E59F71;
+// $color-brown: #BA5A31;
+// $color-green: #539B00;
+
+// FONTS
+$font-content: 'Open Sans Condensed', sans-serif;
+$font-heading: 'Amatic SC', cursive;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 100em;         // 1600px +
+$bp-larger: 87.5em;         // 1400px
+$bp-large: 75em;            // 1200px
+
+$bp-medium-large: 62.5em;   // 1000px
+$bp-medium: 50em;           // 800px
+$bp-medium-small: 43.75em;  // 700px
+        
+$bp-small: 37.5em;          // 600px
+$bp-smaller: 31.25em;       // 500px
+$bp-smallest: 25em;         // 400px
+
+// DEFAULT SETTINGS
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;   // 10px/16px = 62.5%
+    // font-family: $font-content;
+
+    @media only screen and (min-width: $bp-largest) {
+        font-size: 75%;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 55%;
+    }
+}
+
+body {  
+    background-color: $color-dark * .5;
+    font-family: $font-content;
+    max-width: 1800px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+::selection {
+//     background-color: $color-orange;
+//     color: $color-white-dark;
+}
+
+.heading {
+    font-family: $font-heading;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0,0,0, .6), rgba(0,0,0, .1));
+    padding: 3rem 0;
+    font-size: 10rem;
+    color: $color-white-light;
+}
