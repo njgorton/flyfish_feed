@@ -1,5 +1,5 @@
-import React from 'react';
-import VideoItem from './VideoItem';
+import React from 'react'
+import VideoItem from './VideoItem'
 
 const VideoList = ({ videos, onVideoSelect }) => {
     const renderedList = videos.map(video => {
@@ -9,10 +9,10 @@ const VideoList = ({ videos, onVideoSelect }) => {
                 onVideoSelect={onVideoSelect}
                 video={video}
             />
-        );
-    });
+        )
+    })
 
-    return <div>{renderedList}</div>;
-};
+    return <div>{renderedList}</div>
+}
 
-export default VideoList;
+export default VideoList
