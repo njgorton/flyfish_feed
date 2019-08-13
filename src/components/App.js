@@ -20,9 +20,7 @@ const App = () => {
             }
         })
 
-        setVideos(
-            response.data.items
-        )
+        setVideos(response.data.items)
     }
 
     const onVideoSelect = video => {
