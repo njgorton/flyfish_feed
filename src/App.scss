@@ -1,3 +1,7 @@
 @import './styles/_base';
-@import './styles/_container';
-@import './styles/_SearchBar';
+@import './styles/components/_App';
+@import './styles/components/_SearchBar';
+@import './styles/components/_Categories';
+@import './styles/components/_VideoDetail';
+@import './styles/components/_VideoList';
+@import './styles/components/_VideoItem';

@@ -1,0 +1,39 @@
+.videoDetail {
+    &__aspectRatio {
+        position: relative;
+        padding-bottom: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+    }
+
+    &__reactPlayer {
+        position: absolute;
+        bottom: 0;
+        left:0;
+        max-height: 60vh;
+        box-shadow: 0 .5rem 1.5rem rgba(0,0,0, .7);
+    }
+
+    &__description {
+        background: rgba(0,0,0, .4);
+        color: $color-white;
+        box-shadow: .5rem .5rem 1.5rem rgba(0,0,0, .7);
+        padding: 2rem 5rem;
+
+        h2 {
+            font-size: 2rem;
+            text-decoration: underline;
+            background: rgba($color-tertiary, .2);
+            padding: 1rem 2rem;
+            border-top: 1px solid $color-white;
+            text-shadow: 1px 1px 1px rgba($color-black, .7); 
+        }
+    
+        p {
+            font-size: 1.5rem;
+            background: rgba($color-tertiary, .2);
+            padding: 0 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $color-white;
+            text-shadow: 1px 1px 1px rgba($color-black, .7); 
+        }
+    }
+}

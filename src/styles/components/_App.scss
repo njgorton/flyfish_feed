@@ -1,0 +1,68 @@
+.app {
+    background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+
+    &__header {
+        font-family: $font-heading;
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 6rem;
+        color: $color-white;
+        text-shadow: 1px 1px 1px rgba($color-black, .7);
+    }
+
+    &__videoContent {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        justify-items: center;
+        grid-gap: 5rem;
+        //height: 100%;
+        padding: 0 7rem;
+        padding-bottom: 7rem;
+        margin-top: 5rem;
+    }
+
+    &__footer {
+        background-color: rgba($color-secondary, .7);
+        color: $color-white;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__footerText {
+        font-size: 1.5rem;
+        text-align: center; 
+        text-shadow: 1px 1px 1px rgba($color-black, .7);            
+        position: relative;
+        margin: auto 10rem;
+        
+        &::before {
+            content: "";
+            display: block;
+            border-top: 2px solid $color-primary;
+            width: 100rem;                        
+            position: absolute;
+            top: -30%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translate(-50%);
+        }        
+
+        span {
+            color: $color-primary;          
+            font-family: sans-serif;
+        }
+    }
+
+    &__footerLink { 
+        &:link,
+        &:visited {
+            color: currentColor;            
+            text-decoration: none;
+            border-bottom: 2px solid $color-primary;
+            padding: 2px;  
+        }
+    }
+}

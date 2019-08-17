@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import '../App.scss'
+import '../app.scss'
 import SearchBar from './SearchBar'
-import youtube from '../apis/youtube'
+import Categories from './Categories'
+import VideoDetail from './VideoDetail'
 import VideoList from './VideoList'
-// import VideoDetail from './VideoDetail'
+import youtube from '../apis/youtube'
 
 const App = () => {
     const [videos, setVideos] = useState([])
@@ -21,6 +22,7 @@ const App = () => {
         })
 
         setVideos(response.data.items)
+        setSelectedVideo(response.data.items[0])
     }
 
     const onVideoSelect = video => {
@@ -28,53 +30,32 @@ const App = () => {
     }
 
     return (
-        <div className="container">
-            <h1 className="heading">Flyfish Feed</h1>
-            <SearchBar onTermSubmit={onTermSubmit} />
-            <VideoList
-                onVideoSelect={onVideoSelect}
-                videos={videos}
-            />
+        <div className="app">
+            <header>
+                <h1 className="app__header">Flyfish Feed</h1>
+
+                <SearchBar onTermSubmit={onTermSubmit} />
+            </header>
+
+            <nav>
+                <Categories onTermSubmit={onTermSubmit} />
+            </nav>
+
+            <main className="app__videoContent">
+                <VideoDetail selectedVideo={selectedVideo} />
+
+                <VideoList onVideoSelect={onVideoSelect} videos={videos} />
+            </main>
+
+            <footer class="app__footer">
+                <p class="app__footerText">To see the repository for this React App and all my other projects, visit my Github, @
+                    <a href="https://github.com/njgorton" target="_blank" rel="noopener noreferrer" class="app__footerLink"><i class="devicon-github-plain"></i>/njgorton</a>.
+                    <br></br>
+                    Copyright <span>&copy;</span> 2019 Useful UI | Nathaniel Gorton.
+                </p>
+            </footer>
         </div>
     )
 }
-
-// class App extends React.Component {
-//     state = { videos: [], selectedVideo: null };
-
-//     componentDidMount() {
-//         this.onTermSubmit('flyfishing');
-//     }
-
-//     onTermSubmit = async term => {
-//         const response = await youtube.get('/search', {
-//             params: {
-//                 q: `flyfishing ${term}`
-//             }
-//         });
-
-//         this.setState({
-//             videos: response.data.items,
-//             // selectedVideo: response.data.items[0]
-//         });
-//     };
-
-//     onVideoSelect = video => {
-//         this.setState({ selectedVideo: video });
-//     };
-
-//     render() {
-//         return (
-//             <div className="container">
-//                 <h1 className="heading">Flyfish Feed</h1>
-//                 <SearchBar onTermSubmit={this.onTermSubmit} />
-//                 <VideoList
-//                     onVideoSelect={this.onVideoSelect}
-//                     videos={this.state.videos}
-//                 />
-//             </div>
-//         );
-//     }
-// }
 
 export default App
