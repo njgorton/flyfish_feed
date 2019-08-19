@@ -7,6 +7,8 @@ const VideoDetail = ({ selectedVideo }) => {
     }
 
     const videoSrc = `https://www.youtube.com/embed/${selectedVideo.id.videoId}`
+    const date = new Date(selectedVideo.snippet.publishedAt)
+    const formattedDate = `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`
 
     return (
         <div className="videoDetail">
@@ -16,11 +18,13 @@ const VideoDetail = ({ selectedVideo }) => {
                     className="videoDetail__reactPlayer"
                     width='100%'
                     height='100%'
+                    controls={true}
                 />
             </div>
 
             <div className="videoDetail__description">
                 <h2>{selectedVideo.snippet.title}</h2>
+                <span>Published on {formattedDate}</span>
                 <p>{selectedVideo.snippet.description}</p>
             </div>
         </div>

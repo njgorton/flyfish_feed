@@ -47,9 +47,9 @@ const App = () => {
                 <VideoList onVideoSelect={onVideoSelect} videos={videos} />
             </main>
 
-            <footer class="app__footer">
-                <p class="app__footerText">To see the repository for this React App and all my other projects, visit my Github, @
-                    <a href="https://github.com/njgorton" target="_blank" rel="noopener noreferrer" class="app__footerLink"><i class="devicon-github-plain"></i>/njgorton</a>.
+            <footer className="app__footer">
+                <p className="app__footerText">To see the repository for this React App and all my other projects, visit my Github, @
+                    <a href="https://github.com/njgorton" target="_blank" rel="noopener noreferrer" className="app__footerLink"><i className="devicon-github-plain"></i>/njgorton</a>.
                     <br></br>
                     Copyright <span>&copy;</span> 2019 Useful UI | Nathaniel Gorton.
                 </p>
