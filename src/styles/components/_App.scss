@@ -1,7 +1,36 @@
 .app {
-    background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero1800w.jpg');
     background-size: 100% 100%;
     width: 100%;
+
+    // Responsive sizes for hero img:
+    @media only screen and (max-width: $bp-largest) {
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero1600w.jpg');
+    }
+
+    @media only screen and (max-width: $bp-larger) {
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero1400w.jpg');
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero1200w.jpg');
+    }
+
+    @media only screen and (max-width: $bp-medium-large) {
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero1000w.jpg');
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero800w.jpg');
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero600w.jpg');
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero400w.jpg');
+    }
 
     &__header {
         font-family: $font-heading;
@@ -16,8 +45,8 @@
         display: grid;
         grid-template-columns: 3fr 1fr;
         justify-items: center;
+        align-items: center;
         grid-gap: 5rem;
-        //height: 100%;
         padding: 0 7rem;
         padding-bottom: 7rem;
         margin-top: 5rem;
@@ -26,7 +55,7 @@
     &__footer {
         background-color: rgba($color-secondary, .7);
         color: $color-white;
-        height: 10rem;
+        height: 18rem;
         display: flex;
         justify-content: center;
     }
@@ -63,6 +92,14 @@
             text-decoration: none;
             border-bottom: 2px solid $color-primary;
             padding: 2px;  
+        }
+    }
+
+    &__footerCredit {
+        &:link,
+        &:visited {
+            color: currentColor;            
+            text-decoration: none;
         }
     }
 }
