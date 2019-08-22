@@ -16,21 +16,21 @@
         background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero1200w.jpg');
     }
 
-    @media only screen and (max-width: $bp-medium-large) {
-        background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero1000w.jpg');
-    }
+    // @media only screen and (max-width: $bp-medium-large) {
+    //     background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero1000w.jpg');
+    // }
 
-    @media only screen and (max-width: $bp-medium) {
-        background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero800w.jpg');
-    }
+    // @media only screen and (max-width: $bp-medium) {
+    //     background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero800w.jpg');
+    // }
 
-    @media only screen and (max-width: $bp-small) {
-        background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero600w.jpg');
-    }
+    // @media only screen and (max-width: $bp-small) {
+    //     background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero600w.jpg');
+    // }
 
-    @media only screen and (max-width: $bp-smallest) {
-        background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero400w.jpg');
-    }
+    // @media only screen and (max-width: $bp-smallest) {
+    //     background-image: linear-gradient(to bottom, rgba(0,0,0, .2), rgba(0,0,0, .1)), url('./img/hero400w.jpg');
+    // }
 
     &__header {
         font-family: $font-heading;
@@ -50,56 +50,18 @@
         padding: 0 7rem;
         padding-bottom: 7rem;
         margin-top: 5rem;
-    }
 
-    &__footer {
-        background-color: rgba($color-secondary, .7);
-        color: $color-white;
-        height: 18rem;
-        display: flex;
-        justify-content: center;
-    }
+        @media only screen and (max-width: $bp-larger) {
+            grid-gap: 3rem;
+            padding: 0 3rem;
+            padding-bottom: 5rem;
+            margin-top: 3rem;
+        }
 
-    &__footerText {
-        font-size: 1.5rem;
-        text-align: center; 
-        text-shadow: 1px 1px 1px rgba($color-black, .7);            
-        position: relative;
-        margin: auto 10rem;
-        
-        &::before {
-            content: "";
+        @media only screen and (max-width: $bp-medium-large) {
             display: block;
-            border-top: 2px solid $color-primary;
-            width: 100rem;                        
-            position: absolute;
-            top: -30%;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translate(-50%);
-        }        
-
-        span {
-            color: $color-primary;          
-            font-family: sans-serif;
-        }
-    }
-
-    &__footerLink { 
-        &:link,
-        &:visited {
-            color: currentColor;            
-            text-decoration: none;
-            border-bottom: 2px solid $color-primary;
-            padding: 2px;  
-        }
-    }
-
-    &__footerCredit {
-        &:link,
-        &:visited {
-            color: currentColor;            
-            text-decoration: none;
+            padding: 0 10rem;
+            margin-top: 7rem;
         }
     }
 }

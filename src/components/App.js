@@ -3,7 +3,9 @@ import '../app.scss'
 import SearchBar from './SearchBar'
 import Categories from './Categories'
 import VideoDetail from './VideoDetail'
+import ScrollArrows from './ScrollArrows'
 import VideoList from './VideoList'
+import Footer from './Footer'
 import youtube from '../apis/youtube'
 
 const App = () => {
@@ -44,36 +46,13 @@ const App = () => {
             <main className="app__videoContent">
                 <VideoDetail selectedVideo={selectedVideo} />
 
-                <VideoList onVideoSelect={onVideoSelect} videos={videos} />
+                <div className="videoList__container">
+                    <ScrollArrows />
+                    <VideoList onVideoSelect={onVideoSelect} videos={videos} />
+                </div>
             </main>
 
-            <footer className="app__footer">
-                <p className="app__footerText">
-                    To see the repository for this React App and all my other projects, visit my Github, @
-                    <a
-                        href="https://github.com/njgorton"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="app__footerLink">
-                        <i className="devicon-github-plain"></i>/njgorton
-                    </a>.
-                    <br></br>
-                    Image by
-                    <a
-                        className="app__footerCredit"
-                        href="https://pixabay.com/users/praimann-180159/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=280718">
-                        Peter Raimann
-                    </a> from
-                    <a
-                        className="app__footerCredit"
-                        href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=280718">
-                        Pixabay
-                    </a>
-                    <br></br>
-                    <br></br>
-                    Copyright <span>&copy;</span> 2019 Useful UI | Nathaniel Gorton.
-                </p>
-            </footer>
+            <Footer />
         </div>
     )
 }

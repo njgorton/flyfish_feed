@@ -1,0 +1,102 @@
+.scrollArrows {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem; 
+    background: rgba($color-secondary, .7); 
+    box-shadow: .5rem .5rem 1.5rem rgba(0,0,0, .6);
+    border-radius: 50%;           
+    
+    // hide scroll arrows above 1000px vw:
+    @media only screen and (min-width: $bp-medium-large) {
+        display: none;
+    }
+
+    &--top {
+        margin-bottom: auto;
+        padding-top: 1.5rem;
+        animation: jumpUp 1.3s infinite;
+    }
+
+    &--bottom {
+        margin-top: auto;
+        padding-bottom: 1.5rem;
+        animation: jumpDown 1.3s infinite;
+    }
+
+    &__container {
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+
+        @media only screen and (min-width: $bp-medium-large) {
+            display: none;
+        }
+    }
+
+
+    &__leftSide {              
+        width: 2px;                
+        background-color: $color-primary;               
+        //box-shadow: -1.5rem 1.5rem 1.5rem rgba(0, 0, 0, 0.9);
+        transform-origin: bottom;  
+        
+        &--top {
+            transform: rotate(50deg) translateY(-.2rem);               
+            transform-origin: top; 
+        }
+
+        &--bottom {
+            transform: rotate(-50deg) translateY(.2rem);
+            transform-origin: bottom; 
+        }
+    }
+
+    &__rightSide {                
+        width: 2px;                
+        background-color: $color-primary;                
+        //box-shadow: 1.5rem 1.5rem 1.5rem rgba(0, 0, 0, 0.9);
+        
+        &--top {
+            transform: rotate(-50deg) translateY(-.2rem);
+            transform-origin: top;
+        }
+
+        &--bottom {
+            transform: rotate(50deg) translateY(.2rem);
+            transform-origin: bottom;
+        }
+    }
+}  
+
+@keyframes jumpUp {
+    0% {
+        transform: translateY(1rem);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(1rem);
+    }
+}
+
+@keyframes jumpDown {
+    0% {
+        transform: translateY(-1rem);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-1rem);
+    }
+}

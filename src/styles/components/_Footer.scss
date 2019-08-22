@@ -1,0 +1,55 @@
+.footer {
+    background-color: rgba($color-secondary, .7);
+    color: $color-white;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+
+
+    &__text {
+        font-size: 1.5rem;
+        text-align: center; 
+        text-shadow: 1px 1px 1px rgba($color-black, .7);            
+        position: relative;
+        margin: auto 10rem;
+        
+        &::before {
+            content: "";
+            display: block;
+            border-top: 2px solid $color-primary;
+            width: 100rem;                        
+            position: absolute;
+            top: -30%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translate(-50%);
+
+            @media only screen and (max-width: $bp-larger) {
+                width: 75rem;
+            }
+        }        
+
+        span {
+            color: $color-primary;          
+            font-family: sans-serif;
+        }
+    }
+
+    &__link { 
+        &:link,
+        &:visited {
+            color: currentColor;            
+            text-decoration: none;
+            border-bottom: 2px solid $color-primary;
+            padding: 2px;  
+        }
+    }
+
+    &__credit {
+        &:link,
+        &:visited {
+            color: currentColor;            
+            text-decoration: none;
+        }
+    }
+}
