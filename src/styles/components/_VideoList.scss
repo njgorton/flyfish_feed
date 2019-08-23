@@ -7,7 +7,9 @@
 
     @media only screen and (max-width: $bp-medium-large) {
         height: 30rem;
-        margin-left: 3rem;
+        margin-left: 2rem;
+        border-left: 2px solid $color-secondary;
+        border-right: 2px solid $color-secondary;
     }
 
     &__container {
@@ -16,7 +18,7 @@
         justify-content: center;
 
         @media only screen and (max-width: $bp-medium-large) {
-            margin: 5rem 5rem 10rem 5rem;
+            margin:5rem 0 10rem 0;  
             height: 30rem;
         }
     }

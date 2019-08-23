@@ -3,7 +3,6 @@ import '../app.scss'
 import SearchBar from './SearchBar'
 import Categories from './Categories'
 import VideoDetail from './VideoDetail'
-import ScrollArrows from './ScrollArrows'
 import VideoList from './VideoList'
 import Footer from './Footer'
 import youtube from '../apis/youtube'
@@ -35,7 +34,6 @@ const App = () => {
         <div className="app">
             <header>
                 <h1 className="app__header">Flyfish Feed</h1>
-
                 <SearchBar onTermSubmit={onTermSubmit} />
             </header>
 
@@ -45,11 +43,7 @@ const App = () => {
 
             <main className="app__videoContent">
                 <VideoDetail selectedVideo={selectedVideo} />
-
-                <div className="videoList__container">
-                    <ScrollArrows />
-                    <VideoList onVideoSelect={onVideoSelect} videos={videos} />
-                </div>
+                <VideoList onVideoSelect={onVideoSelect} videos={videos} />
             </main>
 
             <Footer />

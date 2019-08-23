@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import VideoItem from './VideoItem'
+import ScrollArrows from './ScrollArrows'
 
 const VideoList = ({ videos, onVideoSelect }) => {
     const renderedList = videos.map(video => {
@@ -12,8 +13,32 @@ const VideoList = ({ videos, onVideoSelect }) => {
         )
     })
 
+    const scrollList = useRef(null)
+
+    const scrollUp = () => {
+        scrollList.current.scrollBy({
+            top: -200,
+            left: 0,
+            behavior: 'smooth'
+        })
+        console.log('scroll up!')
+    }
+
+    const scrollDown = () => {
+        scrollList.current.scrollBy({
+            top: 200,
+            left: 0,
+            behavior: 'smooth'
+        })
+        console.log('scroll down!')
+
+    }
+
     return (
-        <div className="videoList">{renderedList}</div>
+        <div className="videoList__container">
+            <ScrollArrows scrollUp={scrollUp} scrollDown={scrollDown} />
+            <div ref={scrollList} className="videoList">{renderedList}</div>
+        </div>
     )
 }
 

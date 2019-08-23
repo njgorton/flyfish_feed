@@ -18,6 +18,10 @@
         height: 100%;
         max-width: 10rem;
         border: 2px solid $color-secondary;
+
+        @media only screen and (max-width: $bp-medium-large) {
+            max-width: 15rem;
+        }
     }
 
     p {
@@ -27,5 +31,9 @@
         line-height: 1.2;
         margin-left: 1rem;
         text-shadow: 1px 1px 1px rgba($color-black, .7); 
+
+        @media only screen and (max-width: $bp-medium-large) {
+            font-size: 2rem;
+        }
     }
 }
