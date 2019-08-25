@@ -39,6 +39,14 @@
         font-size: 6rem;
         color: $color-white;
         text-shadow: 1px 1px 1px rgba($color-black, .7);
+
+        @media only screen and (max-width: $bp-medium-large) {
+            font-size: 5rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 4rem;
+        }
     }
 
     &__videoContent {
@@ -62,6 +70,11 @@
             display: block;
             padding: 0 10rem;
             margin-top: 7rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 0 7rem;
+            margin-top: 5rem;
         }
     }
 }

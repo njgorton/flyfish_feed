@@ -22,6 +22,10 @@
         @media only screen and (max-width: $bp-medium-large) {
             max-width: 15rem;
         }
+
+        @media only screen and (max-width: $bp-medium-small) {
+            max-width: 10rem;
+        }
     }
 
     p {
@@ -34,6 +38,10 @@
 
         @media only screen and (max-width: $bp-medium-large) {
             font-size: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-medium-small) {
+            font-size: 1.8rem;
         }
     }
 }

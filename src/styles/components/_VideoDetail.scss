@@ -19,6 +19,10 @@
         text-shadow: 1px 1px 1px rgba($color-black, .7);
         padding: 2rem 5rem;
 
+        @media only screen and (max-width: $bp-medium) {
+            padding: 1.5rem 3rem;
+        }
+
         h2 {
             background: rgba($color-tertiary, .1);
             font-size: 2rem;
@@ -28,6 +32,10 @@
 
             @media only screen and (max-width: $bp-medium-large) {
                 font-size: 2.5rem;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 2rem;
             }
         }
 
@@ -41,6 +49,10 @@
             @media only screen and (max-width: $bp-medium-large) {
                 font-size: 2rem;
             }
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 1.8rem;
+            }
         }
     
         p {
@@ -52,6 +64,10 @@
 
             @media only screen and (max-width: $bp-medium-large) {
                 font-size: 2rem;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 1.8rem;
             }
         }
     }

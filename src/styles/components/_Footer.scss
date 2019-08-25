@@ -5,6 +5,10 @@
     display: flex;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-medium-large) {
+        height: 20rem;
+    }
+
 
     &__text {
         font-size: 1.5rem;
@@ -15,6 +19,10 @@
 
         @media only screen and (max-width: $bp-medium-large) {
             font-size: 1.8rem;
+        }
+
+        @media only screen and (max-width: $bp-medium-large) {
+            margin: auto 5rem;
         }
         
         &::before {
@@ -30,6 +38,18 @@
 
             @media only screen and (max-width: $bp-larger) {
                 width: 75rem;
+            }
+
+            @media only screen and (max-width: $bp-medium-large) {
+                top: -20%;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                width: 70rem;
+            }
+
+            @media only screen and (max-width: $bp-medium-small) {
+                width: 60rem;
             }
         }        
 
