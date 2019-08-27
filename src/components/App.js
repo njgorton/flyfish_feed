@@ -37,9 +37,7 @@ const App = () => {
                 <SearchBar onTermSubmit={onTermSubmit} />
             </header>
 
-            <nav>
-                <Categories onTermSubmit={onTermSubmit} />
-            </nav>
+            <Categories onTermSubmit={onTermSubmit} />
 
             <main className="app__videoContent">
                 <VideoDetail selectedVideo={selectedVideo} />
