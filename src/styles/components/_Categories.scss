@@ -6,8 +6,7 @@
 
     &--opened {
         display: flex;
-        animation: expandNav 1s ease-in;
-        border-radius: 50%;
+        animation: expandNav .5s ease-in;
     }
 
     @media only screen and (min-width: $bp-small) { 
@@ -27,7 +26,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;            
-        position: absolute;
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
@@ -68,7 +67,7 @@
 
     &__mobile-nav {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         height: 5rem;
@@ -139,35 +138,11 @@
 
 @keyframes expandNav {
     0% {
-        top: 0;
-        right: 0
-    }
-
-    25% {
-        top: 0;
-        right: 0;
-        bottom: 75%;
-        left: 75%;
-    }
-
-    50% {
-        top: 0;
-        right: 0;
-        bottom: 50%;
-        left: 50%;
-    }
-
-    75% {
-        top: 0;
-        right: 0;
-        bottom: 25%;
-        left: 25%;
+        transform: translate(100%, -100%);
+        border-radius: 50%;
     }
 
     100% {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+       transform: translate(0, 0);
     }
 }

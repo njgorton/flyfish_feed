@@ -11,9 +11,16 @@ const Categories = ({ onTermSubmit }) => {
         setShowNav(nav)
     }
 
+    const closeNav = () => {
+        if (showNav === 'categories--opened' && showNavBtn === 'active') {
+            setShowNav('categories--closed')
+            setShowNavBtn('')
+        }
+    }
+
     return (
         <nav>
-            <ul className={`categories ${showNav}`}>
+            <ul className={`categories ${showNav}`} onClick={closeNav}>
                 <li onClick={() => onTermSubmit('Top Videos')}>Top Videos</li>
                 <li onClick={() => onTermSubmit('Techniques')}>Techniques</li>
                 <li onClick={() => onTermSubmit('Trout')}>Trout</li>
@@ -22,7 +29,14 @@ const Categories = ({ onTermSubmit }) => {
             </ul>
 
             <div className='categories__mobile-nav'>
-                <a id="nav-toggle" href="#!" onClick={handleNav} className={showNavBtn}><span></span></a>
+                <a
+                    id="nav-toggle"
+                    href="#!"
+                    onClick={handleNav}
+                    className={showNavBtn}
+                >
+                    <span></span>
+                </a>
             </div>
         </nav>
     )
