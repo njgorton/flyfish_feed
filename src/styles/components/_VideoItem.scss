@@ -8,6 +8,18 @@
     border-top: 1px solid $color-white;
     border-bottom: 1px solid $color-white;
     box-shadow: .5rem .5rem 1.5rem rgba(0,0,0, .7);
+    transition: all .2s ease;
+
+    &:hover {
+        background: rgba($color-secondary, .65);
+        box-shadow: 1rem 1rem 1.5rem rgba(0,0,0, .7);
+        transform: scale(1.02);
+
+        img {
+            border: 2px solid $color-primary;
+            
+        }
+    }
 
     @media only screen and (max-width: $bp-larger) {
         margin: 2rem 1.5rem;

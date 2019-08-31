@@ -43,6 +43,7 @@
         cursor: pointer;
         text-shadow: 1px 1px 1px rgba($color-black, .7); 
         padding: 1rem;
+        transition: all .2s ease-out;
 
         @media only screen and (max-width: $bp-medium) {
             font-size: 2rem;
@@ -57,11 +58,14 @@
             text-align: center;
             text-decoration: underline;
             box-shadow: .5rem .5rem 1.5rem rgba(0,0,0, .7);
-            // transition: all .2s ease-out;
+        }
 
-            // &:hover {
-            //     transform: translateY(-2px);
-            // }
+        &:hover {
+            background: rgba($color-primary, .9);
+            color: $color-white;
+            text-decoration: underline;
+            box-shadow: .5rem .5rem 1.5rem rgba(0,0,0, .7);
+            transform: scaleX(1.05);
         }
     }
 

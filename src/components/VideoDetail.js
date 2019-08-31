@@ -3,7 +3,11 @@ import ReactPlayer from 'react-player'
 
 const VideoDetail = ({ selectedVideo }) => {
     if (!selectedVideo) {
-        return <h1 style={{ color: 'white' }}>Loading...</h1>
+        return (
+            <div className="videoDetail">
+                <h1 style={{ color: 'white' }}>Loading...</h1>
+            </div>
+        )
     }
 
     const videoSrc = `https://www.youtube.com/embed/${selectedVideo.id.videoId}`
@@ -23,7 +27,7 @@ const VideoDetail = ({ selectedVideo }) => {
             </div>
 
             <div className="videoDetail__description">
-                <h2>{selectedVideo.snippet.title}</h2>
+                <h2><a href={videoSrc}>{selectedVideo.snippet.title}</a></h2>
                 <span>Published on {formattedDate}</span>
                 <p>{selectedVideo.snippet.description}</p>
             </div>
