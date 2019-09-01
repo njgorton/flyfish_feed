@@ -9,6 +9,10 @@
         height: 20rem;
     }
 
+    @media only screen and (max-width: $bp-smaller) {
+        height: 25rem;
+    }
+
 
     &__text {
         font-size: 1.5rem;
@@ -22,6 +26,12 @@
         }
 
         @media only screen and (max-width: $bp-medium-large) {
+            margin: auto 5rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.4rem;
+            line-height: 1.5;
             margin: auto 5rem;
         }
         
@@ -51,6 +61,19 @@
             @media only screen and (max-width: $bp-medium-small) {
                 width: 60rem;
             }
+
+            @media only screen and (max-width: $bp-small) {
+                width: 50rem;
+            }
+
+            @media only screen and (max-width: $bp-smaller) {
+                width: 40rem;
+            }
+
+            @media only screen and (max-width: $bp-smallest) {
+                top: -15%;
+                width: 30rem;
+            }
         }        
 
         span {
@@ -62,6 +85,8 @@
     &__link,
     &__credit,
     &__author {
+        transition: all .2s ease;
+        
         &:link,
         &:visited {
             color: currentColor;            

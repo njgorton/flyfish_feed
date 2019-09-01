@@ -23,6 +23,10 @@
             padding: 1.5rem 3rem;
         }
 
+        @media only screen and (max-width: $bp-small) {
+            padding: 1.5rem;
+        }
+
         h2 a {
             &:link,
             &:visited{
@@ -64,6 +68,10 @@
             @media only screen and (max-width: $bp-medium) {
                 font-size: 1.8rem;
             }
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 1.5rem;
+            }
         }
     
         p {
@@ -79,6 +87,10 @@
 
             @media only screen and (max-width: $bp-medium) {
                 font-size: 1.8rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 1.5rem;
             }
         }
     }
