@@ -21,11 +21,11 @@ const Categories = ({ onTermSubmit }) => {
     return (
         <nav>
             <ul className={`categories ${showNav}`} onClick={closeNav}>
-                <li onClick={() => onTermSubmit('Top Videos')}>Top Videos</li>
-                <li onClick={() => onTermSubmit('Techniques')}>Techniques</li>
-                <li onClick={() => onTermSubmit('Trout')}>Trout</li>
-                <li onClick={() => onTermSubmit('Bass')}>Bass</li>
-                <li onClick={() => onTermSubmit('Saltwater')}>Saltwater</li>
+                <li><button onClick={() => onTermSubmit('Top Videos')} tabIndex='0'>Top Videos</button></li>
+                <li><button onClick={() => onTermSubmit('Techniques')} tabIndex='0'>Techniques</button></li>
+                <li><button onClick={() => onTermSubmit('Trout')} tabIndex='0'>Trout</button></li>
+                <li><button onClick={() => onTermSubmit('Bass')} tabIndex='0'>Bass</button></li>
+                <li><button onClick={() => onTermSubmit('Saltwater')} tabIndex='0'>Saltwater</button></li>
             </ul>
 
             <div className='categories__mobile-nav'>

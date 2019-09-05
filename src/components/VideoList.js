@@ -21,7 +21,6 @@ const VideoList = ({ videos, onVideoSelect }) => {
             left: 0,
             behavior: 'smooth'
         })
-        console.log('scroll up!')
     }
 
     const scrollDown = () => {
@@ -30,8 +29,6 @@ const VideoList = ({ videos, onVideoSelect }) => {
             left: 0,
             behavior: 'smooth'
         })
-        console.log('scroll down!')
-
     }
 
     return (

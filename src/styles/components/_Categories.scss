@@ -37,35 +37,39 @@
     }
 
     li {
-        font-family: $font-heading;
-        font-size: 2.5rem;
-        color: $color-primary;
-        cursor: pointer;
-        text-shadow: 1px 1px 1px rgba($color-black, .7); 
-        padding: 1rem;
-        transition: all .2s ease-out;
+        button {
+            background-color: transparent;
+            background-size: 100%;
+            color: $color-primary;
+            font-family: $font-heading;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 1px rgba($color-black, .7); 
+            cursor: pointer;
+            border: none;
+            padding: 1rem;
+            transition: all .2s ease-out;
 
-        @media only screen and (max-width: $bp-medium) {
-            font-size: 2rem;
-        }
-
-        @media only screen and (max-width: $bp-small) {
-            font-size: 3rem;
-            margin: 1.5rem;
-            background: rgba($color-white, .7);
-            border-radius: 10px;
-            width: 50%;
-            text-align: center;
-            text-decoration: underline;
-            box-shadow: .5rem .5rem 1.5rem rgba(0,0,0, .7);
-        }
-
-        &:hover {
-            background: rgba($color-primary, .9);
-            color: $color-white;
-            text-decoration: underline;
-            box-shadow: .5rem .5rem 1.5rem rgba(0,0,0, .7);
-            transform: scaleX(1.05);
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 2rem;
+            }
+    
+            @media only screen and (max-width: $bp-small) {
+                font-size: 3rem;
+                margin: 1.5rem;
+                background: rgba($color-white, .7);
+                border-radius: 10px;
+                text-align: center;
+                text-decoration: underline;
+                box-shadow: .5rem .5rem 1.5rem rgba(0,0,0, .7);
+            }
+    
+            &:hover {
+                background: rgba($color-primary, .9);
+                color: $color-white;
+                text-decoration: underline;
+                box-shadow: .5rem .5rem 1.5rem rgba(0,0,0, .7);
+                transform: scaleX(1.05);
+            }
         }
     }
 
